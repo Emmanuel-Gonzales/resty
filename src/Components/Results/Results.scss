@@ -1,0 +1,9 @@
+@import '../../Styles/color-scheme.scss';
+
+pre{
+  background-color: $secondaryColor;
+  color: #eee;
+  border:solid #eee;
+  width: fit-content;
+  margin: auto;
+}
