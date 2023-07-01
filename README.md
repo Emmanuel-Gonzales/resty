@@ -1,4 +1,4 @@
-# LAB - Class 26
+# LAB - Class 26, 27
 
 ## Project: Component Based UI
 
