@@ -8,7 +8,7 @@ const Results = (props) => {
       <section>
         {
           props.loading ? <p>loading...</p> :
-        <pre>
+        <pre data-testid="results-pre">
           {props.data 
           ? <JSONPretty data={props.data} theme={JSONPrettyMonkaiTheme}></JSONPretty> 
           : null}

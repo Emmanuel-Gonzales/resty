@@ -22,12 +22,12 @@ const Form = (props) => {
       <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
-          <input name='url' type='text' onChange={(e)=> setUrl(e.target.value) }/>
-          <button type="submit">GO!</button>
+          <input data-testid="form-input" name='url' type='text' onChange={(e)=> setUrl(e.target.value) }/>
+          <button  type="submit">GO!</button>
         </label>
         <label className="methods">
           <span id="get" onClick={(e) => setMethod('GET')}>GET</span>
-          <span id="post" onClick={(e) => setMethod('POST')}>POST</span>
+          <span data-testid="post-button" id="post" onClick={(e) => setMethod('POST')}>POST</span>
           <span id="put" onClick={(e) => setMethod('PUT')}>PUT</span>
           <span id="delete" onClick={(e) => setMethod('DELETE')}>DELETE</span>
         </label>
