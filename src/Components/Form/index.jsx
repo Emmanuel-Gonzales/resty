@@ -5,13 +5,14 @@ import './Form.scss';
 const Form = (props) => {
   const[url, setUrl] = useState('')
   const [method, setMethod] = useState('')
-
+  const [data, setData] = useState('')
 
   let handleSubmit = e => {
     e.preventDefault();
     const formData = {
-      method: method,
-      url: url,
+      method,
+      url,
+      data,
     };
     props.handleApiCall(formData);
   }
@@ -25,9 +26,14 @@ const Form = (props) => {
           <input data-testid="form-input" name='url' type='text' onChange={(e)=> setUrl(e.target.value) }/>
           <button  type="submit">GO!</button>
         </label>
+        <label> json data(is necessary)
+          <textarea rows="4" cols="50 "
+          onChange={(e) => {setData(e.target.value)}}
+          />
+        </label>
         <label className="methods">
-          <span id="get" onClick={(e) => setMethod('GET')}>GET</span>
-          <span data-testid="post-button" id="post" onClick={(e) => setMethod('POST')}>POST</span>
+          <span id="get" onClick={(e) => setMethod('get')}>GET</span>
+          <span data-testid="post-button" id="post" onClick={(e) => setMethod('post')}>POST</span>
           <span id="put" onClick={(e) => setMethod('PUT')}>PUT</span>
           <span id="delete" onClick={(e) => setMethod('DELETE')}>DELETE</span>
         </label>
