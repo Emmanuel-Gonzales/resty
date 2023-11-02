@@ -78,7 +78,7 @@ function App () {
         <div data-testid="app-div-method">Request Method: {requestParams?.method?.toUpperCase()}</div>
         <div data-testid="app-div-url">URL: {requestParams.url}</div>
         <History history={state.history} displayHistory={displayHistory} />
-        <Form handleApiCall={callApi} />
+        <Form handleApiCall={callApi}/>
         <Results data={state.data} loading={state.loading}/>
         <Footer />
       </>
